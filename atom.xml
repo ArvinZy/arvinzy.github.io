@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lucas 博客</title>
+  <subtitle>逗逼入坑记</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://biubiubiu.lol/"/>
+  <updated>2017-02-03T06:49:14.000Z</updated>
+  <id>http://biubiubiu.lol/</id>
+  
+  <author>
+    <name>Lucas Zhang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Data-Loss-at-GitLab</title>
+    <link href="http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/"/>
+    <id>http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/</id>
+    <published>2017-02-03T06:49:14.000Z</published>
+    <updated>2017-02-03T06:49:14.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
