@@ -48,7 +48,7 @@ ga('send', 'pageview');
 2013年，GitLab建立起了自己的免费软件交流社">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fcdnv2yfdfj30x00can06.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fcdnw1ctytj30go0h43zl.jpg">
-<meta property="og:updated_time" content="2017-02-03T16:20:45.000Z">
+<meta property="og:updated_time" content="2017-02-03T16:28:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitLab误删库引发的小思考">
 <meta name="twitter:description" content="前情概要GitLab公司简介尽管GitHub的成功毋庸置疑，但是它还不够完美。
@@ -215,7 +215,8 @@ ga('send', 'pageview');
 <p>于是搞得快要昏古起的YP同学敲下了【rm -rf】命令，只不过他敲在了db1上，并完美的按下了回车去喝咖啡了。</p>
 <p>等到发现并按下Ctrl+C的时候，300G数据已经删除的所剩无几了（还剩4.5G）。</p>
 <p>那怎么办的，公司有五种备份机制，恢复就好了吧？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. 数据库的同步，没有同步Webhook 【webhook科普】</div><div class="line">2. 硬盘快照，没做数据库的快照</div><div class="line">3. pg_dump的备份，用9.2的版本去dump 9.6的数据，导致没有dump出数据</div><div class="line">4. S3的备份，完全没有备份上</div><div class="line">5. 人肉备份，可能是因为懒。。。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">数据库的同步，没有同步Webhook</div><div class="line">硬盘快照，没做数据库的快照</div><div class="line">pg_dump的备份，用9.2的版本去dump 9.6的数据，导致没有dump出数据</div><div class="line">S3的备份，完全没有备份上</div><div class="line">人肉备份，可能是因为懒。。。</div></pre></td></tr></table></figure>
+<p>(<a href="https://worktile.com/club/tutorial/d5003cd3d8ae4033a75cc285fee60d04" target="_blank" rel="external">Webhook科普</a>)</p>
 <p>最后他们发现有个6个小时前的备份，勉强用吧。。。</p>
 <h3 id="丢失的数据"><a href="#丢失的数据" class="headerlink" title="丢失的数据"></a>丢失的数据</h3><ul>
 <li>粗略估计，有4613 的项目， 74 forks,  和 350 imports 丢失了；但是，因为Git仓库还在，所以，可以从Git仓库反向推导数据库中的数据，但是，项目中的issues等就完全丢失了。</li>
@@ -226,13 +227,13 @@ ga('send', 'pageview');
 <p>（via：<a href="http://coolshell.cn/articles/17680.html" target="_blank" rel="external">酷壳</a>）</p>
 <h3 id="值得赞扬的地方"><a href="#值得赞扬的地方" class="headerlink" title="值得赞扬的地方"></a>值得赞扬的地方</h3><p>事件发生后公开处理：</p>
 <ol>
-<li>整个事件经过，放在了 <a href="https://docs.google.com/document/d/1GCK53YDcBWQveod9kfzW-VCxIABGiryG7_z_6jHdVik/pub" target="_blank" rel="external">Google Docs</a> 上</li>
+<li>整个事件经过，第一时间放在了 <a href="https://docs.google.com/document/d/1GCK53YDcBWQveod9kfzW-VCxIABGiryG7_z_6jHdVik/pub" target="_blank" rel="external">Google Docs</a> 上</li>
 <li><a href="https://twitter.com/gitlab" target="_blank" rel="external">Twitter</a> 同步更新恢复进度</li>
 <li>YouTube 直播恢复过程，直播聊天很欢快（我在B站看的搬运）</li>
 </ol>
 <p>透明处理获得了许多外部的帮助</p>
-<p>公司决定不会开除YP小可爱 （惩罚是听10个小时的Nyan Cat，祝安好😊）</p>
-<p>想办法通过日志等恢复6个小时内的数据</p>
+<p>公司决定不会开除YP小可爱 （但惩罚是听10个小时的Nyan Cat，祝安好😊）</p>
+<p>想办法通过日志等恢复丢失的6个小时内的数据</p>
 <h2 id="一些个人想法及反思"><a href="#一些个人想法及反思" class="headerlink" title="一些个人想法及反思"></a>一些个人想法及反思</h2><p>【从删库到跑路教程】最近发生的很多，比如前不久网易就发生了，导致《炉石传说》游戏回档到前一天，这些都让大伙不得不开始重视此类事件。（听说阿里内部也经常发生🤔）</p>
 <h3 id="为何会发生"><a href="#为何会发生" class="headerlink" title="为何会发生"></a>为何会发生</h3><p>会发现，这样的事件都是人为不慎的误操作导致的。</p>
 <h3 id="如何避免"><a href="#如何避免" class="headerlink" title="如何避免"></a>如何避免</h3><h4 id="他人的建议："><a href="#他人的建议：" class="headerlink" title="他人的建议："></a>他人的建议：</h4><ol>
@@ -259,7 +260,7 @@ ga('send', 'pageview');
 <li>备份要多节点，多种方式，防止各种问题</li>
 <li>既然人工误操作问题不能完美解决，就让灾备系统完美运行吧</li>
 </ol>
-<h4 id="Ask-5-Whys"><a href="#Ask-5-Whys" class="headerlink" title="Ask 5 Whys"></a>Ask 5 Whys</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">1. 你需要找到正确的团队来完成这个故障反思。</div><div class="line">2. 使用纸或白板而不是电脑。</div><div class="line">3. 写下整个问题的过程，确保每个人都能看懂。</div><div class="line">4. 区别原因和症状。</div><div class="line">5. 特别注意因果关系。</div><div class="line">6. 说明Root Cause以及相关的证据。</div><div class="line">7. 5个为什么的答案需要是精确的。</div><div class="line">8. 寻找问题根源的步骤，而不是直接跳到结论。</div><div class="line">9. 要基础客观的事实、数据和知识。</div><div class="line">10. 评估过程而不是人。</div><div class="line">11. 千万不要把“人为失误”或是“工作不注意”当成问题的根源。</div><div class="line">12. 培养信任和真诚的气氛和文化。</div><div class="line">13. 不断的问“为什么”直到问题的根源被找到。这样可以保证同一个坑不会掉进去两次。</div><div class="line">14. 当你给出“为什么”的答案时，你应该从用户的角度来回答。</div></pre></td></tr></table></figure>
+<h4 id="Ask-5-Whys"><a href="#Ask-5-Whys" class="headerlink" title="Ask 5 Whys"></a>Ask 5 Whys</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">你需要找到正确的团队来完成这个故障反思。</div><div class="line">使用纸或白板而不是电脑。</div><div class="line">写下整个问题的过程，确保每个人都能看懂。</div><div class="line">区别原因和症状。</div><div class="line">特别注意因果关系。</div><div class="line">说明Root Cause以及相关的证据。</div><div class="line">5个为什么的答案需要是精确的。</div><div class="line">寻找问题根源的步骤，而不是直接跳到结论。</div><div class="line">要基础客观的事实、数据和知识。</div><div class="line">评估过程而不是人。</div><div class="line">千万不要把“人为失误”或是“工作不注意”当成问题的根源。</div><div class="line">培养信任和真诚的气氛和文化。</div><div class="line">不断的问“为什么”直到问题的根源被找到。这样可以保证同一个坑不会掉进去两次。</div><div class="line">当你给出“为什么”的答案时，你应该从用户的角度来回答。</div></pre></td></tr></table></figure>
 <p>（via：<a href="https://en.wikipedia.org/wiki/5_Whys" target="_blank" rel="external">Wikipedia</a>）</p>
 <h3 id="趣闻"><a href="#趣闻" class="headerlink" title="趣闻"></a>趣闻</h3><figure class="image-bubble">
                 <div class="img-lightbox">
@@ -285,7 +286,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-02-03T16:20:45.000Z" itemprop="dateUpdated">2017年2月4日 0:20</time>
+    最后更新时间：<time datetime="2017-02-03T16:28:39.000Z" itemprop="dateUpdated">2017年2月4日 0:28</time>
 </span><br>
 
 
