@@ -48,7 +48,7 @@ ga('send', 'pageview');
 2013年，GitLab建立起了自己的免费软件交流社">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fcdnv2yfdfj30x00can06.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fcdnw1ctytj30go0h43zl.jpg">
-<meta property="og:updated_time" content="2017-02-03T15:01:16.000Z">
+<meta property="og:updated_time" content="2017-02-03T16:18:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitLab误删库引发的小思考">
 <meta name="twitter:description" content="前情概要GitLab公司简介尽管GitHub的成功毋庸置疑，但是它还不够完美。
@@ -177,7 +177,7 @@ ga('send', 'pageview');
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前情概要"><span class="post-toc-number">1.</span> <span class="post-toc-text">前情概要</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitLab公司简介"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">GitLab公司简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitLab项目简介"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">GitLab项目简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件经过"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">事件经过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#丢失的数据"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">丢失的数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#值得赞扬的地方"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">值得赞扬的地方</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些个人想法及反思"><span class="post-toc-number">2.</span> <span class="post-toc-text">一些个人想法及反思</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为何会发生"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">为何会发生</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何避免"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">如何避免</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-一个人操作，另一个人在旁看，有问题提醒"><span class="post-toc-number">2.2.0.1.</span> <span class="post-toc-text">1. 一个人操作，另一个人在旁看，有问题提醒</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-使用mv代替rm"><span class="post-toc-number">2.2.0.2.</span> <span class="post-toc-text">2. 使用mv代替rm</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-增加权限"><span class="post-toc-number">2.2.0.3.</span> <span class="post-toc-text">3. 增加权限</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-系统中碰到rm这种命令增加二次确认"><span class="post-toc-number">2.2.0.4.</span> <span class="post-toc-text">4. 系统中碰到rm这种命令增加二次确认</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#个人意见"><span class="post-toc-number">2.2.0.5.</span> <span class="post-toc-text">个人意见</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Ask-5-Whys"><span class="post-toc-number">2.2.0.6.</span> <span class="post-toc-text">Ask 5 Whys</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#趣闻"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">趣闻</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前情概要"><span class="post-toc-number">1.</span> <span class="post-toc-text">前情概要</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitLab公司简介"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">GitLab公司简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitLab项目简介"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">GitLab项目简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件经过"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">事件经过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#丢失的数据"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">丢失的数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#值得赞扬的地方"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">值得赞扬的地方</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些个人想法及反思"><span class="post-toc-number">2.</span> <span class="post-toc-text">一些个人想法及反思</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为何会发生"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">为何会发生</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何避免"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">如何避免</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#个人意见"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">个人意见</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Ask-5-Whys"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">Ask 5 Whys</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#趣闻"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">趣闻</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -236,11 +236,23 @@ ga('send', 'pageview');
 <h2 id="一些个人想法及反思"><a href="#一些个人想法及反思" class="headerlink" title="一些个人想法及反思"></a>一些个人想法及反思</h2><p>【从删库到跑路教程】最近发生的很多，比如前不久网易就发生了，导致《炉石传说》游戏回档到前一天，这些都让大伙不得不开始重视此类事件。（听说阿里内部也经常发生🤔）</p>
 <h3 id="为何会发生"><a href="#为何会发生" class="headerlink" title="为何会发生"></a>为何会发生</h3><p>会发现，这样的事件都是人为不慎的误操作导致的。</p>
 <h3 id="如何避免"><a href="#如何避免" class="headerlink" title="如何避免"></a>如何避免</h3><p>讨论中他人的建议：</p>
-<h5 id="1-一个人操作，另一个人在旁看，有问题提醒"><a href="#1-一个人操作，另一个人在旁看，有问题提醒" class="headerlink" title="1. 一个人操作，另一个人在旁看，有问题提醒"></a>1. 一个人操作，另一个人在旁看，有问题提醒</h5><p>增加了人力成本，时间成本，效率成本，并且依旧会出事，两个人也会因为疲惫等问题出错。</p>
-<h5 id="2-使用mv代替rm"><a href="#2-使用mv代替rm" class="headerlink" title="2. 使用mv代替rm"></a>2. 使用mv代替rm</h5><p>规范需要有学习成本，并且依旧是人在实施，可能在某些情况依旧会使用rm导致出错。</p>
-<h5 id="3-增加权限"><a href="#3-增加权限" class="headerlink" title="3. 增加权限"></a>3. 增加权限</h5><p>有权限的人依旧会出事啊，现在出错的人不都是有权限的人吗？</p>
-<h5 id="4-系统中碰到rm这种命令增加二次确认"><a href="#4-系统中碰到rm这种命令增加二次确认" class="headerlink" title="4. 系统中碰到rm这种命令增加二次确认"></a>4. 系统中碰到rm这种命令增加二次确认</h5><p>二次确认也挡不住我不听使唤的双手啊！！！</p>
-<h5 id="个人意见"><a href="#个人意见" class="headerlink" title="个人意见"></a>个人意见</h5><ol>
+<ol>
+<li>一个人操作，另一个人在旁看，有问题提醒</li>
+</ol>
+<p>增加了人力成本，时间成本，效率成本，并且依旧会出事，两个人也会因为疲惫等问题出错。</p>
+<ol>
+<li>使用mv代替rm</li>
+</ol>
+<p>规范需要有学习成本，并且依旧是人在实施，可能在某些情况依旧会使用rm导致出错。</p>
+<ol>
+<li>增加权限</li>
+</ol>
+<p>有权限的人依旧会出事啊，现在出错的人不都是有权限的人吗？</p>
+<ol>
+<li>系统中碰到rm这种命令增加二次确认</li>
+</ol>
+<p>二次确认也挡不住我不听使唤的双手啊！！！</p>
+<h4 id="个人意见"><a href="#个人意见" class="headerlink" title="个人意见"></a>个人意见</h4><ol>
 <li>依旧做好备份工作</li>
 <li>做好相关的文档工作</li>
 <li>定期检查备份是否正常</li>
@@ -248,7 +260,7 @@ ga('send', 'pageview');
 <li>备份要多节点，多种方式，防止各种问题</li>
 <li>既然人工误操作问题不能完美解决，就让灾备系统完美运行吧</li>
 </ol>
-<h5 id="Ask-5-Whys"><a href="#Ask-5-Whys" class="headerlink" title="Ask 5 Whys"></a>Ask 5 Whys</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">1. 你需要找到正确的团队来完成这个故障反思。</div><div class="line">2. 使用纸或白板而不是电脑。</div><div class="line">3. 写下整个问题的过程，确保每个人都能看懂。</div><div class="line">4. 区别原因和症状。</div><div class="line">5. 特别注意因果关系。</div><div class="line">6. 说明Root Cause以及相关的证据。</div><div class="line">7. 5个为什么的答案需要是精确的。</div><div class="line">8. 寻找问题根源的步骤，而不是直接跳到结论。</div><div class="line">9. 要基础客观的事实、数据和知识。</div><div class="line">10. 评估过程而不是人。</div><div class="line">11. 千万不要把“人为失误”或是“工作不注意”当成问题的根源。</div><div class="line">12. 培养信任和真诚的气氛和文化。</div><div class="line">13. 不断的问“为什么”直到问题的根源被找到。这样可以保证同一个坑不会掉进去两次。</div><div class="line">14. 当你给出“为什么”的答案时，你应该从用户的角度来回答。</div></pre></td></tr></table></figure>
+<h4 id="Ask-5-Whys"><a href="#Ask-5-Whys" class="headerlink" title="Ask 5 Whys"></a>Ask 5 Whys</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">1. 你需要找到正确的团队来完成这个故障反思。</div><div class="line">2. 使用纸或白板而不是电脑。</div><div class="line">3. 写下整个问题的过程，确保每个人都能看懂。</div><div class="line">4. 区别原因和症状。</div><div class="line">5. 特别注意因果关系。</div><div class="line">6. 说明Root Cause以及相关的证据。</div><div class="line">7. 5个为什么的答案需要是精确的。</div><div class="line">8. 寻找问题根源的步骤，而不是直接跳到结论。</div><div class="line">9. 要基础客观的事实、数据和知识。</div><div class="line">10. 评估过程而不是人。</div><div class="line">11. 千万不要把“人为失误”或是“工作不注意”当成问题的根源。</div><div class="line">12. 培养信任和真诚的气氛和文化。</div><div class="line">13. 不断的问“为什么”直到问题的根源被找到。这样可以保证同一个坑不会掉进去两次。</div><div class="line">14. 当你给出“为什么”的答案时，你应该从用户的角度来回答。</div></pre></td></tr></table></figure>
 <p>（via：<a href="https://en.wikipedia.org/wiki/5_Whys" target="_blank" rel="external">Wikipedia</a>）</p>
 <h3 id="趣闻"><a href="#趣闻" class="headerlink" title="趣闻"></a>趣闻</h3><figure class="image-bubble">
                 <div class="img-lightbox">
@@ -274,7 +286,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-02-03T15:01:16.000Z" itemprop="dateUpdated">2017年2月3日 23:01</time>
+    最后更新时间：<time datetime="2017-02-03T16:18:43.000Z" itemprop="dateUpdated">2017年2月4日 0:18</time>
 </span><br>
 
 
