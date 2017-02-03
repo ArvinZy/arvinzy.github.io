@@ -29,28 +29,37 @@ ga('send', 'pageview');
     
     
     
-    <title>Data-Loss-at-GitLab | Lucas 博客 | 逗逼入坑记</title>
+    <title>GitLab误删库引发的小思考 | Lucas 博客 | 逗逼入坑记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="博客,日记,代码备份,心情,吐槽">
+    <meta name="keywords" content="Gitlab,备份">
+    <meta name="description" content="前情概要GitLab公司简介尽管GitHub的成功毋庸置疑，但是它还不够完美。
+于是2011年，来自荷兰的程序员Dmitriy Zaporozhets开发了另一个代码管理工具——“GitLab”，起初这个工具只是他自己用来解决现有工具处理不了的问题。之后考虑到别人可能也有类似的问题，Zaporozhets便把GitLab的源代码免费发布到网上。
+2013年，GitLab建立起了自己的免费软件交流社">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Data-Loss-at-GitLab">
+<meta property="og:title" content="GitLab误删库引发的小思考">
 <meta property="og:url" content="http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/index.html">
 <meta property="og:site_name" content="Lucas 博客">
-<meta property="og:description" content="博客,日记,代码备份,心情,吐槽">
-<meta property="og:updated_time" content="2017-02-03T06:49:14.000Z">
+<meta property="og:description" content="前情概要GitLab公司简介尽管GitHub的成功毋庸置疑，但是它还不够完美。
+于是2011年，来自荷兰的程序员Dmitriy Zaporozhets开发了另一个代码管理工具——“GitLab”，起初这个工具只是他自己用来解决现有工具处理不了的问题。之后考虑到别人可能也有类似的问题，Zaporozhets便把GitLab的源代码免费发布到网上。
+2013年，GitLab建立起了自己的免费软件交流社">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fcdnv2yfdfj30x00can06.jpg">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fcdnw1ctytj30go0h43zl.jpg">
+<meta property="og:updated_time" content="2017-02-03T15:01:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Data-Loss-at-GitLab">
-<meta name="twitter:description" content="博客,日记,代码备份,心情,吐槽">
+<meta name="twitter:title" content="GitLab误删库引发的小思考">
+<meta name="twitter:description" content="前情概要GitLab公司简介尽管GitHub的成功毋庸置疑，但是它还不够完美。
+于是2011年，来自荷兰的程序员Dmitriy Zaporozhets开发了另一个代码管理工具——“GitLab”，起初这个工具只是他自己用来解决现有工具处理不了的问题。之后考虑到别人可能也有类似的问题，Zaporozhets便把GitLab的源代码免费发布到网上。
+2013年，GitLab建立起了自己的免费软件交流社">
+<meta name="twitter:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fcdnv2yfdfj30x00can06.jpg">
     
         <link rel="alternative" href="/atom.xml" title="Lucas 博客" type="application/atom+xml">
     
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css?v=1.4.7">
     <script>window.lazyScripts=[]</script>
 </head>
 
@@ -65,7 +74,7 @@ ga('send', 'pageview');
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
+          <img src="../../img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Lucas Zhang</h5>
@@ -77,23 +86,23 @@ ga('send', 'pageview');
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="../../index.html"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                文章
+              <a href="../../tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
+              <a href="../../categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                类别
               </a>
             </li>
         
@@ -122,7 +131,7 @@ ga('send', 'pageview');
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Data-Loss-at-GitLab</div>
+        <div class="flex-col header-title ellipsis">GitLab误删库引发的小思考</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -144,13 +153,15 @@ ga('send', 'pageview');
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Data-Loss-at-GitLab</h1>
+        <h1 class="title">GitLab误删库引发的小思考</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-02-03T06:49:14.000Z" itemprop="datePublished" class="page-time">
+                <time datetime="2017-02-03T07:43:44.000Z" itemprop="datePublished" class="page-time">
   2017-02-03
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/感想/">感想</a></li></ul>
 
             
         </h5>
@@ -163,15 +174,24 @@ ga('send', 'pageview');
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前情概要"><span class="post-toc-number">1.</span> <span class="post-toc-text">前情概要</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitLab公司简介"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">GitLab公司简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitLab项目简介"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">GitLab项目简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件经过"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">事件经过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#丢失的数据"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">丢失的数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#值得赞扬的地方"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">值得赞扬的地方</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些个人想法及反思"><span class="post-toc-number">2.</span> <span class="post-toc-text">一些个人想法及反思</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为何会发生"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">为何会发生</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何避免"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">如何避免</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-一个人操作，另一个人在旁看，有问题提醒"><span class="post-toc-number">2.2.0.1.</span> <span class="post-toc-text">1. 一个人操作，另一个人在旁看，有问题提醒</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-使用mv代替rm"><span class="post-toc-number">2.2.0.2.</span> <span class="post-toc-text">2. 使用mv代替rm</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-增加权限"><span class="post-toc-number">2.2.0.3.</span> <span class="post-toc-text">3. 增加权限</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-系统中碰到rm这种命令增加二次确认"><span class="post-toc-number">2.2.0.4.</span> <span class="post-toc-text">4. 系统中碰到rm这种命令增加二次确认</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#个人意见"><span class="post-toc-number">2.2.0.5.</span> <span class="post-toc-text">个人意见</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Ask-5-Whys"><span class="post-toc-number">2.2.0.6.</span> <span class="post-toc-text">Ask 5 Whys</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#趣闻"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">趣闻</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
 <article id="post-Data-Loss-at-GitLab"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Data-Loss-at-GitLab</h1>
+        <h1 class="post-card-title">GitLab误删库引发的小思考</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017年02月03日 14:49" datetime="2017-02-03T06:49:14.000Z"  itemprop="datePublished">2017-02-03</time>
+            <time class="post-time" title="2017年02月03日 15:43" datetime="2017-02-03T07:43:44.000Z"  itemprop="datePublished">2017-02-03</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/感想/">感想</a></li></ul>
+
 
 
             
@@ -184,22 +204,85 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <h2 id="前情概要"><a href="#前情概要" class="headerlink" title="前情概要"></a>前情概要</h2><h3 id="GitLab公司简介"><a href="#GitLab公司简介" class="headerlink" title="GitLab公司简介"></a>GitLab公司简介</h3><p>尽管GitHub的成功毋庸置疑，但是它还不够完美。</p>
+<p>于是2011年，来自荷兰的程序员Dmitriy Zaporozhets开发了另一个代码管理工具——“GitLab”，起初这个工具只是他自己用来解决现有工具处理不了的问题。之后考虑到别人可能也有类似的问题，Zaporozhets便把GitLab的源代码免费发布到网上。</p>
+<p>2013年，GitLab建立起了自己的免费软件交流社区，之后Zaporozhets与现任首席执行官Sytse “Sid” Sijbrandij一起把GitLab发展成为正式的公司。</p>
+<p>时至今日，GitLab已经成为不少财富500强企业的首选代码存储库。加强的安全性和管理控制与迎合IT部门的软件环境为GitLab赢得了大批企业粉丝。</p>
+<h3 id="GitLab项目简介"><a href="#GitLab项目简介" class="headerlink" title="GitLab项目简介"></a>GitLab项目简介</h3><p>GitLab是一个利用 <a href="http://www.oschina.net/p/ruby+on+rails" target="_blank" rel="external">Ruby on Rails</a> 开发的开源应用程序，实现一个自托管的<a href="http://www.oschina.net/p/git" target="_blank" rel="external">Git</a>项目仓库，可通过Web界面进行访问公开的或者私人项目。</p>
+<p>它拥有与<a href="http://www.oschina.net/p/github" target="_blank" rel="external">Github</a>类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。它还提供一个代码片段收集功能可以轻松实现代码复用，便于日后有需要的时候进行查找。</p>
+<p>(via：<a href="https://www.oschina.net/p/gitlab" target="_blank" rel="external">开源中国</a>)</p>
+<h3 id="事件经过"><a href="#事件经过" class="headerlink" title="事件经过"></a>事件经过</h3><p>一个叫做YP的小可爱在给公司线上db做负载均衡，做着做着碰到了DDoS攻击，等攻击完了发生了可怕的事，db2有差不多4G的数据没同步上生产库(以下称生产库为db1)，YP小可爱锤了10遍胸口也没使db2同步上那4个G的数据，于是他想到了一种横竖横的方法，删了db2的数据，重新从db1同步（类似修电脑常用的重装系统的方法，我常用😂）。</p>
+<p>于是搞得快要昏古起的YP同学敲下了【rm -rf】命令，只不过他敲在了db1上，并完美的按下了回车去喝咖啡了。</p>
+<p>等到发现并按下Ctrl+C的时候，300G数据已经删除的所剩无几了（还剩4.5G）。</p>
+<p>那怎么办的，公司有五种备份机制，恢复就好了吧？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. 数据库的同步，没有同步Webhook 【webhook科普】</div><div class="line">2. 硬盘快照，没做数据库的快照</div><div class="line">3. pg_dump的备份，用9.2的版本去dump 9.6的数据，导致没有dump出数据</div><div class="line">4. S3的备份，完全没有备份上</div><div class="line">5. 人肉备份，可能是因为懒。。。</div></pre></td></tr></table></figure>
+<p>最后他们发现有个6个小时前的备份，勉强用吧。。。</p>
+<h3 id="丢失的数据"><a href="#丢失的数据" class="headerlink" title="丢失的数据"></a>丢失的数据</h3><ul>
+<li>粗略估计，有4613 的项目， 74 forks,  和 350 imports 丢失了；但是，因为Git仓库还在，所以，可以从Git仓库反向推导数据库中的数据，但是，项目中的issues等就完全丢失了。</li>
+<li>大约有±4979 提交记录丢失了（陈皓注：估计也可以用git仓库中反向恢复）。</li>
+<li>可能有 707  用户丢失了，这个数据来自Kibana的日志。</li>
+<li>在1月31日17:20 后的Webhooks 丢失了。</li>
+</ul>
+<p>（via：<a href="http://coolshell.cn/articles/17680.html" target="_blank" rel="external">酷壳</a>）</p>
+<h3 id="值得赞扬的地方"><a href="#值得赞扬的地方" class="headerlink" title="值得赞扬的地方"></a>值得赞扬的地方</h3><p>事件发生后公开处理：</p>
+<ol>
+<li>整个事件经过，放在了 <a href="https://docs.google.com/document/d/1GCK53YDcBWQveod9kfzW-VCxIABGiryG7_z_6jHdVik/pub" target="_blank" rel="external">Google Docs</a> 上</li>
+<li><a href="https://twitter.com/gitlab" target="_blank" rel="external">Twitter</a> 同步更新恢复进度</li>
+<li>YouTube 直播恢复过程，直播聊天很欢快（我在B站看的搬运）</li>
+</ol>
+<p>透明处理获得了许多外部的帮助</p>
+<p>公司决定不会开除YP小可爱 （惩罚是听10个小时的Nyan Cat，祝安好😊）</p>
+<p>想办法通过日志等恢复6个小时内的数据</p>
+<h2 id="一些个人想法及反思"><a href="#一些个人想法及反思" class="headerlink" title="一些个人想法及反思"></a>一些个人想法及反思</h2><p>【从删库到跑路教程】最近发生的很多，比如前不久网易就发生了，导致《炉石传说》游戏回档到前一天，这些都让大伙不得不开始重视此类事件。（听说阿里内部也经常发生🤔）</p>
+<h3 id="为何会发生"><a href="#为何会发生" class="headerlink" title="为何会发生"></a>为何会发生</h3><p>会发现，这样的事件都是人为不慎的误操作导致的。</p>
+<h3 id="如何避免"><a href="#如何避免" class="headerlink" title="如何避免"></a>如何避免</h3><p>讨论中他人的建议：</p>
+<h5 id="1-一个人操作，另一个人在旁看，有问题提醒"><a href="#1-一个人操作，另一个人在旁看，有问题提醒" class="headerlink" title="1. 一个人操作，另一个人在旁看，有问题提醒"></a>1. 一个人操作，另一个人在旁看，有问题提醒</h5><p>增加了人力成本，时间成本，效率成本，并且依旧会出事，两个人也会因为疲惫等问题出错。</p>
+<h5 id="2-使用mv代替rm"><a href="#2-使用mv代替rm" class="headerlink" title="2. 使用mv代替rm"></a>2. 使用mv代替rm</h5><p>规范需要有学习成本，并且依旧是人在实施，可能在某些情况依旧会使用rm导致出错。</p>
+<h5 id="3-增加权限"><a href="#3-增加权限" class="headerlink" title="3. 增加权限"></a>3. 增加权限</h5><p>有权限的人依旧会出事啊，现在出错的人不都是有权限的人吗？</p>
+<h5 id="4-系统中碰到rm这种命令增加二次确认"><a href="#4-系统中碰到rm这种命令增加二次确认" class="headerlink" title="4. 系统中碰到rm这种命令增加二次确认"></a>4. 系统中碰到rm这种命令增加二次确认</h5><p>二次确认也挡不住我不听使唤的双手啊！！！</p>
+<h5 id="个人意见"><a href="#个人意见" class="headerlink" title="个人意见"></a>个人意见</h5><ol>
+<li>依旧做好备份工作</li>
+<li>做好相关的文档工作</li>
+<li>定期检查备份是否正常</li>
+<li>经常live下，实践下看灾备系统是否能正常</li>
+<li>备份要多节点，多种方式，防止各种问题</li>
+<li>既然人工误操作问题不能完美解决，就让灾备系统完美运行吧</li>
+</ol>
+<h5 id="Ask-5-Whys"><a href="#Ask-5-Whys" class="headerlink" title="Ask 5 Whys"></a>Ask 5 Whys</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">1. 你需要找到正确的团队来完成这个故障反思。</div><div class="line">2. 使用纸或白板而不是电脑。</div><div class="line">3. 写下整个问题的过程，确保每个人都能看懂。</div><div class="line">4. 区别原因和症状。</div><div class="line">5. 特别注意因果关系。</div><div class="line">6. 说明Root Cause以及相关的证据。</div><div class="line">7. 5个为什么的答案需要是精确的。</div><div class="line">8. 寻找问题根源的步骤，而不是直接跳到结论。</div><div class="line">9. 要基础客观的事实、数据和知识。</div><div class="line">10. 评估过程而不是人。</div><div class="line">11. 千万不要把“人为失误”或是“工作不注意”当成问题的根源。</div><div class="line">12. 培养信任和真诚的气氛和文化。</div><div class="line">13. 不断的问“为什么”直到问题的根源被找到。这样可以保证同一个坑不会掉进去两次。</div><div class="line">14. 当你给出“为什么”的答案时，你应该从用户的角度来回答。</div></pre></td></tr></table></figure>
+<p>（via：<a href="https://en.wikipedia.org/wiki/5_Whys" target="_blank" rel="external">Wikipedia</a>）</p>
+<h3 id="趣闻"><a href="#趣闻" class="headerlink" title="趣闻"></a>趣闻</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fcdnv2yfdfj30x00can06.jpg" alt="weiruan" title="">
+                </div>
+                <div class="image-caption">weiruan</div>
+            </figure>
+<p>佩服这种核弹毁灭了，第二天依旧勤奋工作的小可爱。</p>
+<p>今天立春了，祝大家春暖花开！</p>
+<p>最后送大家一本书，以便及时应对不时之需：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fcdnw1ctytj30go0h43zl.jpg" alt="mysql从删库到跑路" title="">
+                </div>
+                <div class="image-caption">mysql从删库到跑路</div>
+            </figure>
+
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-02-03T06:49:14.000Z" itemprop="dateUpdated">2017年2月3日 14:49</time>
+    最后更新时间：<time datetime="2017-02-03T15:01:16.000Z" itemprop="dateUpdated">2017年2月3日 23:01</time>
 </span><br>
 
 
-        这里写留言或版权声明：<a href="/20170203/Data-Loss-at-GitLab/" target="_blank" rel="external">http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/</a>
+        欢迎转发并带上链接：<a href="" target="_blank" rel="external">http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/</a>
     </div>
     <footer>
         <a href="http://biubiubiu.lol">
-            <img src="/img/avatar.jpg" alt="Lucas Zhang">
+            <img src="../../img/avatar.jpg" alt="Lucas Zhang">
             Lucas Zhang
         </a>
     </footer>
@@ -214,6 +297,8 @@ ga('send', 'pageview');
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Gitlab/">Gitlab</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/备份/">备份</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -222,7 +307,7 @@ ga('send', 'pageview');
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&title=《Data-Loss-at-GitLab》 — Lucas 博客&pic=http://biubiubiu.lol/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&title=《GitLab误删库引发的小思考》 — Lucas 博客&pic=http://biubiubiu.lol/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -232,7 +317,7 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&title=《Data-Loss-at-GitLab》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&title=《GitLab误删库引发的小思考》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -242,7 +327,7 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Data-Loss-at-GitLab》 — Lucas 博客&url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&via=http://biubiubiu.lol" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GitLab误删库引发的小思考》 — Lucas 博客&url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&via=http://biubiubiu.lol" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -272,13 +357,13 @@ ga('send', 'pageview');
     
 
 <div class="comments" id="comments">
-    <div class="ds-thread" data-thread-key="Data-Loss-at-GitLab" data-title="Data-Loss-at-GitLab" data-url="http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/"></div>
+    <div class="ds-thread" data-thread-key="Data-Loss-at-GitLab" data-title="GitLab误删库引发的小思考" data-url="http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/"></div>
 </div>
 <script>
 lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
 
 var duoshuoQuery = {short_name:'biubiubiublog', theme: 'none'};
-lazyScripts.push('/js/embed.min.js?v=1.4.7');
+lazyScripts.push('../../js/embed.min.js?v=1.4.7');
 
 
 </script>
@@ -295,20 +380,20 @@ lazyScripts.push('/js/embed.min.js?v=1.4.7');
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
-        谢谢大爷~
+        谢谢各位老爷~
         <i class="icon icon-quote-right"></i>
     </h3>
     <ul class="reward-items">
         
         <li>
-            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <img src="../../img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
             <p>微信</p>
         </li>
         
 
         
         <li>
-            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <img src="../../img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
             <p>支付宝</p>
         </li>
         
@@ -354,7 +439,7 @@ lazyScripts.push('/js/embed.min.js?v=1.4.7');
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&title=《Data-Loss-at-GitLab》 — Lucas 博客&pic=http://biubiubiu.lol/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&title=《GitLab误删库引发的小思考》 — Lucas 博客&pic=http://biubiubiu.lol/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -364,7 +449,7 @@ lazyScripts.push('/js/embed.min.js?v=1.4.7');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&title=《Data-Loss-at-GitLab》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&title=《GitLab误删库引发的小思考》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -374,7 +459,7 @@ lazyScripts.push('/js/embed.min.js?v=1.4.7');
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Data-Loss-at-GitLab》 — Lucas 博客&url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&via=http://biubiubiu.lol" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GitLab误删库引发的小思考》 — Lucas 博客&url=http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/&via=http://biubiubiu.lol" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -404,7 +489,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 </script>
 
-<script src="/js/main.min.js?v=1.4.7"></script>
+<script src="../../js/main.min.js?v=1.4.7"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -424,7 +509,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.4.7" async></script>
+<script src="../../js/search.min.js?v=1.4.7" async></script>
 
 
 
