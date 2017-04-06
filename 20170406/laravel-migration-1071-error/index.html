@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-91329435-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?bd6356fed2051272a77b00a21c42a3c7"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="TNqZptNi9u1ldR5qP3lcfjak5O843-Hfh7i-ZFUiQ28">
+    
+    
+    
+    <title>laravel-migration-1071-error | Lucas 博客 | 逗逼入坑记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="laravel,database">
+    <meta name="description" content="错误提示：php artisan migrate创建表时提示如下错误
+123[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel-migration-1071-error">
+<meta property="og:url" content="http://biubiubiu.lol/20170406/laravel-migration-1071-error/index.html">
+<meta property="og:site_name" content="Lucas 博客">
+<meta property="og:description" content="错误提示：php artisan migrate创建表时提示如下错误
+123[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter t">
+<meta property="og:updated_time" content="2017-04-06T08:08:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="laravel-migration-1071-error">
+<meta name="twitter:description" content="错误提示：php artisan migrate创建表时提示如下错误
+123[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter t">
+    
+        <link rel="alternative" href="/atom.xml" title="Lucas 博客" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="../../img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Lucas Zhang</h5>
+          <a href="mailto:599258605@qq.com" title="599258605@qq.com" class="mail">599258605@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="../../index.html"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="../../tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="../../categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                类别
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/arvinzy" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/kawayixiaozhu" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">laravel-migration-1071-error</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">laravel-migration-1071-error</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-06T07:44:28.000Z" itemprop="datePublished" class="page-time">
+  2017-04-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/laravel/">laravel</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#错误提示："><span class="post-toc-number">1.</span> <span class="post-toc-text">错误提示：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运行环境："><span class="post-toc-number">2.</span> <span class="post-toc-text">运行环境：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原因："><span class="post-toc-number">3.</span> <span class="post-toc-text">原因：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决方法："><span class="post-toc-number">4.</span> <span class="post-toc-text">解决方法：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-基础方法"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1.基础方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-更优方法"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2.更优方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-最好办法"><span class="post-toc-number">5.</span> <span class="post-toc-text">3.最好办法</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-laravel-migration-1071-error"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">laravel-migration-1071-error</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年04月06日 15:44" datetime="2017-04-06T07:44:28.000Z"  itemprop="datePublished">2017-04-06</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/laravel/">laravel</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="错误提示："><a href="#错误提示：" class="headerlink" title="错误提示："></a>错误提示：</h3><p>php artisan migrate创建表时提示如下错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter tabl e users add unique users_email_unique(email))</div><div class="line"></div><div class="line">[PDOException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes</div></pre></td></tr></table></figure>
+<h3 id="运行环境："><a href="#运行环境：" class="headerlink" title="运行环境："></a>运行环境：</h3><p>Laravel = 5.4</p>
+<p>PHP = 7.0</p>
+<p>MariaDB = 10. 1.21</p>
+<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>Laravel 使用 utf8mb4 作为默认编码，原有是想数据库支持emoji表情，但是默认编码是4个字节，数据库支持最大767个bytes，所以最大长度767/4=191，string类型字段默认长度255超过了191。</p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><h4 id="1-基础方法"><a href="#1-基础方法" class="headerlink" title="1.基础方法"></a>1.基础方法</h4><p>修改/app/Providers/AppServiceProvider.php</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">use Illuminate\Support\Facades\Schema; //Import Schema</div><div class="line"></div><div class="line">function boot()</div><div class="line">&#123;</div><div class="line">    Schema::defaultStringLength(191); //Solved by increasing StringLength</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>修改了默认长度。</p>
+<h4 id="2-更优方法"><a href="#2-更优方法" class="headerlink" title="2.更优方法"></a>2.更优方法</h4><p>了解并修改数据库的innodb_large_prefix选项。</p>
+<h3 id="3-最好办法"><a href="#3-最好办法" class="headerlink" title="3.最好办法"></a>3.最好办法</h3><p>Mysql升级到5.7.7以及更新版本。</p>
+<p>MariaDB升级到10.2.2以及更新版本。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-04-06T08:08:44.000Z" itemprop="dateUpdated">2017年4月6日 16:08</time>
+</span><br>
+
+
+        欢迎转发并带上链接：<a href="" target="_blank" rel="external">http://biubiubiu.lol/20170406/laravel-migration-1071-error/</a>
+    </div>
+    <footer>
+        <a href="http://biubiubiu.lol">
+            <img src="../../img/avatar.jpg" alt="Lucas Zhang">
+            Lucas Zhang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/database/">database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/laravel/">laravel</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://biubiubiu.lol/20170406/laravel-migration-1071-error/&title=《laravel-migration-1071-error》 — Lucas 博客&pic=http://biubiubiu.lol/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://biubiubiu.lol/20170406/laravel-migration-1071-error/&title=《laravel-migration-1071-error》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://biubiubiu.lol/20170406/laravel-migration-1071-error/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《laravel-migration-1071-error》 — Lucas 博客&url=http://biubiubiu.lol/20170406/laravel-migration-1071-error/&via=http://biubiubiu.lol" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://biubiubiu.lol/20170406/laravel-migration-1071-error/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="../../20170203/Data-Loss-at-GitLab/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">GitLab误删库引发的小思考</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'biubiubiu';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢各位老爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="../../img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="../../img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Lucas 博客 &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://biubiubiu.lol/20170406/laravel-migration-1071-error/&title=《laravel-migration-1071-error》 — Lucas 博客&pic=http://biubiubiu.lol/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://biubiubiu.lol/20170406/laravel-migration-1071-error/&title=《laravel-migration-1071-error》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://biubiubiu.lol/20170406/laravel-migration-1071-error/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《laravel-migration-1071-error》 — Lucas 博客&url=http://biubiubiu.lol/20170406/laravel-migration-1071-error/&via=http://biubiubiu.lol" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://biubiubiu.lol/20170406/laravel-migration-1071-error/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aQY6EMAwFUe5/aeYAM4T6ThgpcWWFaBp4LCzb8XXhdf9aT+fHV/K7XV8sGTJkbMvgL8F/Jf+q3fmRKkOGjAaMpwg2DpfjMzyMkjD98s4yZMiQUUrs0g8xPpYhQ4YMzhhjyCNrPBkyZMhIm2XjtG98nqeDn9TiMmTI2JDBu+7/f/zJ/oYMGTK2Ytzh+iJA39NLhgwZZzN4gEtTtPF5vglK3keGDBkdGLx05O2z+eEMXgzLkCHjbMaq8YiZ6jJtz/3xqwwZMloyar2sNHCTbU50vQwZMhow5jHpUEXt+se0UoYMGQ0YaVNs1TVpEYvqbxkyZBzKIOkXOZ4Ju8FW5VMRK0OGjAaMdLSCt+H4lmQtQZQhQ0Y3Bk8c001HnlAGAJI/ypAh4whGrYCsJXm1zYCXkC1Dhoz2jC9edP74ZdhChgwZxzHIw3iilobLIAVMu4YyZMg4glH7Q7oBycP3zPaqDBkyzmaQhIy/RDpAxp+FgrgMGTIOZaQbmbVBilX3ebxShgwZbRi1IpYkcHxcgyesQT0tQ4aMIxi10rHWXJuHBeWrDBkyNmfc4Urbc6Shxoc8irmtDBkyNmfwlY5ipINf6UBGESNDhoxtGWkrfy2+lobGCaIMGTKOYKT9q9qQRFBbg3B8pQ+WIUNGGwYvX1cliNeMT4YMGY0ZtUBZSzfRh5AhQ0YDRroZwIcwZoZZ+UeRIUPG2YxlIQ/nabWXWNAElCFDxn6MH0qK8C5sVrxcAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="../../js/main.min.js?v=1.4.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="../../js/search.min.js?v=1.4.7" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
