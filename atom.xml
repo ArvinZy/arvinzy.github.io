@@ -5,9 +5,9 @@
   <subtitle>逗逼入坑记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://biubiubiu.lol/"/>
+  <link href="http://blog.netbiu.com/"/>
   <updated>2017-04-06T08:08:44.000Z</updated>
-  <id>http://biubiubiu.lol/</id>
+  <id>http://blog.netbiu.com/</id>
   
   <author>
     <name>Lucas Zhang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>laravel-migration-1071-error</title>
-    <link href="http://biubiubiu.lol/20170406/laravel-migration-1071-error/"/>
-    <id>http://biubiubiu.lol/20170406/laravel-migration-1071-error/</id>
+    <link href="http://blog.netbiu.com/20170406/laravel-migration-1071-error/"/>
+    <id>http://blog.netbiu.com/20170406/laravel-migration-1071-error/</id>
     <published>2017-04-06T07:44:28.000Z</published>
     <updated>2017-04-06T08:08:44.000Z</updated>
     
@@ -35,19 +35,19 @@
     
     </summary>
     
-      <category term="laravel" scheme="http://biubiubiu.lol/categories/laravel/"/>
+      <category term="laravel" scheme="http://blog.netbiu.com/categories/laravel/"/>
     
     
-      <category term="laravel" scheme="http://biubiubiu.lol/tags/laravel/"/>
+      <category term="laravel" scheme="http://blog.netbiu.com/tags/laravel/"/>
     
-      <category term="database" scheme="http://biubiubiu.lol/tags/database/"/>
+      <category term="database" scheme="http://blog.netbiu.com/tags/database/"/>
     
   </entry>
   
   <entry>
     <title>GitLab误删库引发的小思考</title>
-    <link href="http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/"/>
-    <id>http://biubiubiu.lol/20170203/Data-Loss-at-GitLab/</id>
+    <link href="http://blog.netbiu.com/20170203/Data-Loss-at-GitLab/"/>
+    <id>http://blog.netbiu.com/20170203/Data-Loss-at-GitLab/</id>
     <published>2017-02-03T07:43:44.000Z</published>
     <updated>2017-02-04T01:58:34.000Z</updated>
     
@@ -62,12 +62,12 @@
     
     </summary>
     
-      <category term="感想" scheme="http://biubiubiu.lol/categories/%E6%84%9F%E6%83%B3/"/>
+      <category term="感想" scheme="http://blog.netbiu.com/categories/%E6%84%9F%E6%83%B3/"/>
     
     
-      <category term="Gitlab" scheme="http://biubiubiu.lol/tags/Gitlab/"/>
+      <category term="Gitlab" scheme="http://blog.netbiu.com/tags/Gitlab/"/>
     
-      <category term="备份" scheme="http://biubiubiu.lol/tags/%E5%A4%87%E4%BB%BD/"/>
+      <category term="备份" scheme="http://blog.netbiu.com/tags/%E5%A4%87%E4%BB%BD/"/>
     
   </entry>
   
