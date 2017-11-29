@@ -28,6 +28,8 @@ ga('send', 'pageview');
     <meta name="google-site-verification" content="TNqZptNi9u1ldR5qP3lcfjak5O843-Hfh7i-ZFUiQ28">
     
     
+    <link rel="canonical" href="http://blog.netbiu.com">
+    
     
     <title>laravel-migration-1071-error | Lucas 博客 | 逗逼入坑记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -50,29 +52,33 @@ ga('send', 'pageview');
 <meta name="twitter:description" content="错误提示：php artisan migrate创建表时提示如下错误
 123[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter t">
     
-        <link rel="alternative" href="/atom.xml" title="Lucas 博客" type="application/atom+xml">
+        <link rel="alternate" type="application/atom+xml" title="Lucas 博客" href="../../atom.xml">
     
     <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../css/style.css?v=1.4.7">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap">
+    <div class="brand-wrap" style="background-image:url(../../img/brand.jpg)">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
+        <a href="../../index.html" class="avatar waves-effect waves-circle waves-light">
           <img src="../../img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Lucas Zhang</h5>
-          <a href="mailto:599258605@qq.com" title="599258605@qq.com" class="mail">599258605@qq.com</a>
+          <a href="mailto:lucas@qing-u.com" title="lucas@qing-u.com" class="mail">lucas@qing-u.com</a>
         </hgroup>
       </div>
     </div>
@@ -87,16 +93,23 @@ ga('send', 'pageview');
             </li>
         
             <li class="waves-block waves-effect">
+              <a href="../../archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
               <a href="../../tags"  >
                 <i class="icon icon-lg icon-tags"></i>
-                标签
+                Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="../../categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
-                类别
+                Categories
               </a>
             </li>
         
@@ -163,6 +176,7 @@ ga('send', 'pageview');
 
     
 
+
 </header>
 
 
@@ -181,7 +195,7 @@ ga('send', 'pageview');
     <div class="post-card">
         <h1 class="post-card-title">laravel-migration-1071-error</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017年04月06日 15:44" datetime="2017-04-06T07:44:28.000Z"  itemprop="datePublished">2017-04-06</time>
+            <time class="post-time" title="2017-04-06 15:44:28" datetime="2017-04-06T07:44:28.000Z"  itemprop="datePublished">2017-04-06</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/laravel/">laravel</a></li></ul>
@@ -193,8 +207,6 @@ ga('send', 'pageview');
     <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
 </span>
 
-
-            
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
@@ -217,11 +229,13 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-04-06T08:08:44.000Z" itemprop="dateUpdated">2017年4月6日 16:08</time>
+    最后更新时间：<time datetime="2017-04-06T08:08:44.000Z" itemprop="dateUpdated">2017-04-06 16:08:44</time>
 </span><br>
 
 
+        
         欢迎转发并带上链接：<a href="" target="_blank" rel="external">http://biubiubiu.lol/20170406/laravel-migration-1071-error/</a>
+        
     </div>
     <footer>
         <a href="http://biubiubiu.lol">
@@ -315,14 +329,19 @@ ga('send', 'pageview');
 
 
 
+
 <section class="comments" id="comments">
-    <div id="disqus_thread"></div>
-    <script>
-    var disqus_shortname = 'biubiubiu';
-    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=2113894"></script>
+    <!-- UY END -->
 </section>
+
+
+
+
+
+
 
 
 
@@ -333,24 +352,26 @@ ga('send', 'pageview');
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
-        谢谢各位老爷~
+        谢谢大爷~
         <i class="icon icon-quote-right"></i>
     </h3>
-    <ul class="reward-items">
+    <div class="reward-content">
         
-        <li>
-            <img src="../../img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
-            <p>微信</p>
-        </li>
+        <div class="reward-code">
+            <img id="rewardCode" src="../../img/wechat.jpg" alt="打赏二维码">
+        </div>
         
-
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="../../img/wechat.jpg" data-alipay="../../img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
         
-        <li>
-            <img src="../../img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
-            <p>支付宝</p>
-        </li>
-        
-    </ul>
+    </div>
 </div>
 
 
@@ -371,14 +392,20 @@ ga('send', 'pageview');
 
 
         <p>
-            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+            
+                <span><a href="../../atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
-        <p>
-            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
-            <span>Lucas 博客 &copy; 2017</span>
+        <p><span>Lucas Zhang &copy; 2017</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备17026652号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
         </p>
     </div>
 </footer>
@@ -439,10 +466,9 @@ ga('send', 'pageview');
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
-
 </script>
 
-<script src="../../js/main.min.js?v=1.4.7"></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -462,7 +488,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 </li>
 </template>
 
-<script src="../../js/search.min.js?v=1.4.7" async></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
@@ -470,6 +496,26 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
 
 
 </body>
