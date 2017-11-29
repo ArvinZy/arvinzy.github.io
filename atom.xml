@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.netbiu.com/"/>
-  <updated>2017-11-29T17:59:56.916Z</updated>
+  <updated>2017-11-29T18:56:45.882Z</updated>
   <id>http://blog.netbiu.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>github更换新域名，hexo每次部署后失效</title>
+    <link href="http://blog.netbiu.com/20171130/github-custom-domain-cannt-change-by-hexo-deploy/"/>
+    <id>http://blog.netbiu.com/20171130/github-custom-domain-cannt-change-by-hexo-deploy/</id>
+    <published>2017-11-29T18:42:17.000Z</published>
+    <updated>2017-11-29T18:56:45.882Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="基本介绍："><a href="#基本介绍：" class="headerlink" title="基本介绍："></a>基本介绍：</h3><p>hexo部署到github pages<br>使用域名绑定了<br>现在要更换绑定新的域名</p><h3 id="错误信息："><a href="#错误信息：" class="headerlink" title="错误信息："></a>错误信息：</h3><p>修改了Github Pages的绑定域名（custom-domain）,原先的弃用了，但是每次hexo部署到github后，又会绑定到原先的域名上</p><p>在 <a href="https://github.com/{用户名}/{项目}/settings" target="_blank" rel="external">https://github.com/{用户名}/{项目}/settings</a> 上可以看到GitHub Pages栏目里</p><blockquote><p>“Your site is published at {原先的域名}”</p></blockquote><h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>本地hexo项目根目录搜索原先的域名，替换三个CHAME中的域名，换成新域名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">根目录\source\CHAME</div><div class="line">根目录\publish\CHAME</div><div class="line">根目录\.deploy_git\CHAME</div></pre></td></tr></table></figure></p><p>重新部署到github</p><p>解决！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;基本介绍：&quot;&gt;&lt;a href=&quot;#基本介绍：&quot; class=&quot;headerlink&quot; title=&quot;基本介绍：&quot;&gt;&lt;/a&gt;基本介绍：&lt;/h3&gt;&lt;p&gt;hexo部署到github pages&lt;br&gt;使用域名绑定了&lt;br&gt;现在要更换绑定新的域名&lt;/p&gt;
+&lt;h3 id=&quot;
+      
+    
+    </summary>
+    
+      <category term="github" scheme="http://blog.netbiu.com/categories/github/"/>
+    
+    
+      <category term="github" scheme="http://blog.netbiu.com/tags/github/"/>
+    
+      <category term="domain" scheme="http://blog.netbiu.com/tags/domain/"/>
+    
+      <category term="hexo" scheme="http://blog.netbiu.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>找不到libjpeg.8.dylib解决方法</title>

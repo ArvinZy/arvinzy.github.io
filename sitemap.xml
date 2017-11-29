@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.netbiu.com/20171130/github-custom-domain-cannt-change-by-hexo-deploy/</loc>
+    
+    <lastmod>2017-11-29T18:56:45.882Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.netbiu.com/20171130/xdebug-impact-on-composer/</loc>
     
     <lastmod>2017-11-29T18:01:04.654Z</lastmod>
