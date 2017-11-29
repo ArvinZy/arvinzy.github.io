@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-91329435-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?bd6356fed2051272a77b00a21c42a3c7"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="TNqZptNi9u1ldR5qP3lcfjak5O843-Hfh7i-ZFUiQ28">
+    
+    
+    <link rel="canonical" href="http://blog.netbiu.com">
+    
+    
+    <title>xdebug-impact-on-composer | Lucas 博客 | 逗逼入坑记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="xdebug,composer,php">
+    <meta name="description" content="警告提示：对于安装了xdebug的朋友在使用composer的时候，会有个关于xdebug的waring提示。主要是xdebug会拖慢composer的速度。而且有waring很难看！
+解决方法定位php.ini路径1php -i | grep &amp;quot;php.ini&amp;quot;
+一般默认路径为/usr/local/etc/php/{PHP版本号}/php.ini
+进入目录1cd /usr/l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="xdebug-impact-on-composer">
+<meta property="og:url" content="http://blog.netbiu.com/20171130/xdebug-impact-on-composer/index.html">
+<meta property="og:site_name" content="Lucas 博客">
+<meta property="og:description" content="警告提示：对于安装了xdebug的朋友在使用composer的时候，会有个关于xdebug的waring提示。主要是xdebug会拖慢composer的速度。而且有waring很难看！
+解决方法定位php.ini路径1php -i | grep &amp;quot;php.ini&amp;quot;
+一般默认路径为/usr/local/etc/php/{PHP版本号}/php.ini
+进入目录1cd /usr/l">
+<meta property="og:updated_time" content="2017-11-29T17:40:38.005Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="xdebug-impact-on-composer">
+<meta name="twitter:description" content="警告提示：对于安装了xdebug的朋友在使用composer的时候，会有个关于xdebug的waring提示。主要是xdebug会拖慢composer的速度。而且有waring很难看！
+解决方法定位php.ini路径1php -i | grep &amp;quot;php.ini&amp;quot;
+一般默认路径为/usr/local/etc/php/{PHP版本号}/php.ini
+进入目录1cd /usr/l">
+    
+        <link rel="alternate" type="application/atom+xml" title="Lucas 博客" href="../../atom.xml">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(../../img/brand.jpg)">
+      <div class="brand">
+        <a href="../../index.html" class="avatar waves-effect waves-circle waves-light">
+          <img src="../../img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Lucas Zhang</h5>
+          <a href="mailto:lucas@qing-u.com" title="lucas@qing-u.com" class="mail">lucas@qing-u.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="../../index.html"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="../../archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="../../tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="../../categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/arvinzy" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/kawayixiaozhu" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">xdebug-impact-on-composer</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">xdebug-impact-on-composer</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-11-29T17:13:47.000Z" itemprop="datePublished" class="page-time">
+  2017-11-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/composer/">composer</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#警告提示："><span class="post-toc-number">1.</span> <span class="post-toc-text">警告提示：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决方法"><span class="post-toc-number">2.</span> <span class="post-toc-text">解决方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#定位php-ini路径"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">定位php.ini路径</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#进入目录"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">进入目录</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#复制php-ini"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">复制php.ini</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#删除php-composer-ini中xdebug模块"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">删除php-composer.ini中xdebug模块</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查看composer路径"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">查看composer路径</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加alias"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">添加alias</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#验证"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">验证</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-xdebug-impact-on-composer"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">xdebug-impact-on-composer</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-11-30 01:13:47" datetime="2017-11-29T17:13:47.000Z"  itemprop="datePublished">2017-11-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/composer/">composer</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="警告提示："><a href="#警告提示：" class="headerlink" title="警告提示："></a>警告提示：</h3><p>对于安装了xdebug的朋友在使用composer的时候，会有个关于xdebug的waring提示。<br>主要是xdebug会拖慢composer的速度。而且有waring很难看！</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><h4 id="定位php-ini路径"><a href="#定位php-ini路径" class="headerlink" title="定位php.ini路径"></a>定位php.ini路径</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php -i | grep &quot;php.ini&quot;</div></pre></td></tr></table></figure>
+<p>一般默认路径为/usr/local/etc/php/{PHP版本号}/php.ini</p>
+<h4 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/etc/php/&#123;PHP版本号&#125;</div></pre></td></tr></table></figure>
+<h4 id="复制php-ini"><a href="#复制php-ini" class="headerlink" title="复制php.ini"></a>复制php.ini</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp php.ini php-composer.ini</div></pre></td></tr></table></figure>
+<h4 id="删除php-composer-ini中xdebug模块"><a href="#删除php-composer-ini中xdebug模块" class="headerlink" title="删除php-composer.ini中xdebug模块"></a>删除php-composer.ini中xdebug模块</h4><p>如果php-composer.ini中有zend_extension=”{你的xdebug路径}/xdebug.so”<br>在这前加;号注释掉此语句</p>
+<p>或者</p>
+<p>是否在cond.f目录下有ext-xdebug.ini<br>将ext-xdebug.ini中的zend_extension=”{你的xdebug路径}/xdebug.so”复制到php.ini中<br>然后删除ext-xdebug.ini</p>
+<p>主要目的就是php-composer.ini不要加载xdebug模块就好</p>
+<h4 id="查看composer路径"><a href="#查看composer路径" class="headerlink" title="查看composer路径"></a>查看composer路径</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">which composer</div></pre></td></tr></table></figure>
+<h4 id="添加alias"><a href="#添加alias" class="headerlink" title="添加alias"></a>添加alias</h4><p>在~/.bash_profile 或者 ~/.bashrc 或者 ~/.zshrc 中添加alias<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alias composer=&quot;php -c php-composer.ini &#123;composer路径&#125;&quot;</div><div class="line">/*例如我的*/</div><div class="line">alias composer=&quot;php -c php-composer.ini /usr/local/bin/composer&quot;</div></pre></td></tr></table></figure></p>
+<p>保存后记得source下使得zshrc之类的生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.zshrc</div></pre></td></tr></table></figure></p>
+<h4 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer -V</div></pre></td></tr></table></figure>
+<p>应该不会出现提示了</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-11-29T17:40:38.005Z" itemprop="dateUpdated">2017-11-30 01:40:38</time>
+</span><br>
+
+
+        
+        欢迎转发并带上链接：<a href="" target="_blank" rel="external">http://blog.netbiu.com/20171130/xdebug-impact-on-composer/</a>
+        
+    </div>
+    <footer>
+        <a href="http://blog.netbiu.com">
+            <img src="../../img/avatar.jpg" alt="Lucas Zhang">
+            Lucas Zhang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/composer/">composer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/xdebug/">xdebug</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/&title=《xdebug-impact-on-composer》 — Lucas 博客&pic=http://blog.netbiu.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/&title=《xdebug-impact-on-composer》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《xdebug-impact-on-composer》 — Lucas 博客&url=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/&via=http://blog.netbiu.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="../../20170406/laravel-migration-1071-error/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">laravel-migration-1071-error</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=2113894"></script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="../../img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="../../img/wechat.jpg" data-alipay="../../img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="../../atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Lucas Zhang &copy; 2017</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备17026652号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/&title=《xdebug-impact-on-composer》 — Lucas 博客&pic=http://blog.netbiu.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/&title=《xdebug-impact-on-composer》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《xdebug-impact-on-composer》 — Lucas 博客&url=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/&via=http://blog.netbiu.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.netbiu.com/20171130/xdebug-impact-on-composer/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aS27CUAwFUPa/aTqlqkqvbUCN38kIoUBygmT8u93i4/5wPL6TnJ+c+dtVXnxgYGBclnF/eiQXqN5ofk5ybxgYGOcwql+dBOJ5wC08OAwMDIwf5yTvJOdjYGBgvC/gTm7iH/1vYGBgXIqRFLGTQJyUwc8fzctqcQwMjAsy8q7751+/Zb6BgYFxKca9eFTTtV6gLN8VBgbGaka11MyTvMnqRu8bMDAwTmNUy9T58DIfFRS6hhgYGCsYr1otrTbU8jAdPVAMDIzVjF4imMfySRk8eSgYGBhbGcnSQ3VdNRlG5olj9DtgYGAsZVQv30vUJkE2GmpiYGCsZvRWLvK0slcGzx8cBgbGJkY+GKgmgr1yNA/BGBgYZzJ6Lf7e8LL6n/DHvWFgYCxl5M36ahMtaa5VBwxRxoqBgbGUMV/PiuaicYmbL7Z+2xnBwMBYyshbbHkA7SWLk09hYGDsZuShLR8VzFt1+cgTAwPjBEa+JFFdxai23nopKQYGxpmM3us8WM+HENGyBQYGxgGMalt/kvYlrbdmwMXAwFjHqLbS8vI1x/eGChgYGLsZk1WJpOmWDyxH40wMDIzVjN4gs3pONcj2imcMDIzdjCTIVgPupBzNAy4GBsZpjDzwTXa0eqlnoZTFwMDAaBWu+SpGb1EMAwMDY3KB+TizMFjFwMA4gNFr1ldXvnrFcNTaw8DAWM3olabzacOkhdccZGJgYFyP8QXBDn5MtxhLkwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你怎么不见啦？';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

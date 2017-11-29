@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.netbiu.com/20171130/xdebug-impact-on-composer/</loc>
+    
+    <lastmod>2017-11-29T17:40:38.005Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.netbiu.com/20170406/laravel-migration-1071-error/</loc>
+    
+    <lastmod>2017-11-29T17:15:24.337Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.netbiu.com/categories/index.html</loc>
     
     <lastmod>2017-11-29T16:18:40.946Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://blog.netbiu.com/tags/index.html</loc>
     
     <lastmod>2017-11-29T16:18:17.867Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.netbiu.com/20170406/laravel-migration-1071-error/</loc>
-    
-    <lastmod>2017-04-06T08:08:44.000Z</lastmod>
     
   </url>
   
