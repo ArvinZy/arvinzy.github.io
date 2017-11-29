@@ -31,26 +31,29 @@ ga('send', 'pageview');
     <link rel="canonical" href="http://blog.netbiu.com">
     
     
-    <title>laravel建数据库表时出现1071错误 | Lucas 博客 | 逗逼入坑记</title>
+    <title>找不到libjpeg.8.dylib解决方法 | Lucas 博客 | 逗逼入坑记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="laravel,database">
-    <meta name="description" content="错误提示：php artisan migrate创建表时提示如下错误
-123[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter t">
+    <meta name="keywords" content="mac,php,jpeg">
+    <meta name="description" content="错误提示：运行php指令及其有依赖的指令，例如composer出现错误提示：
+1234dyld: Library not loaded: /usr/local/opt/jpeg/lib/libjpeg.8.dylib  Referenced from: /usr/local/bin/php  Reason: image not foundAbort trap: 6
+起因：反正肯定文件不存在是找不到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="laravel建数据库表时出现1071错误">
-<meta property="og:url" content="http://blog.netbiu.com/20170406/laravel-migration-1071-error/index.html">
+<meta property="og:title" content="找不到libjpeg.8.dylib解决方法">
+<meta property="og:url" content="http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/index.html">
 <meta property="og:site_name" content="Lucas 博客">
-<meta property="og:description" content="错误提示：php artisan migrate创建表时提示如下错误
-123[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter t">
-<meta property="og:updated_time" content="2017-11-29T18:00:37.770Z">
+<meta property="og:description" content="错误提示：运行php指令及其有依赖的指令，例如composer出现错误提示：
+1234dyld: Library not loaded: /usr/local/opt/jpeg/lib/libjpeg.8.dylib  Referenced from: /usr/local/bin/php  Reason: image not foundAbort trap: 6
+起因：反正肯定文件不存在是找不到">
+<meta property="og:updated_time" content="2017-11-29T17:59:56.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="laravel建数据库表时出现1071错误">
-<meta name="twitter:description" content="错误提示：php artisan migrate创建表时提示如下错误
-123[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter t">
+<meta name="twitter:title" content="找不到libjpeg.8.dylib解决方法">
+<meta name="twitter:description" content="错误提示：运行php指令及其有依赖的指令，例如composer出现错误提示：
+1234dyld: Library not loaded: /usr/local/opt/jpeg/lib/libjpeg.8.dylib  Referenced from: /usr/local/bin/php  Reason: image not foundAbort trap: 6
+起因：反正肯定文件不存在是找不到">
     
         <link rel="alternate" type="application/atom+xml" title="Lucas 博客" href="../../atom.xml">
     
@@ -138,7 +141,7 @@ ga('send', 'pageview');
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">laravel建数据库表时出现1071错误</div>
+        <div class="flex-col header-title ellipsis">找不到libjpeg.8.dylib解决方法</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -160,15 +163,15 @@ ga('send', 'pageview');
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">laravel建数据库表时出现1071错误</h1>
+        <h1 class="title">找不到libjpeg.8.dylib解决方法</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-04-06T07:44:28.000Z" itemprop="datePublished" class="page-time">
-  2017-04-06
+                <time datetime="2017-11-29T17:48:34.000Z" itemprop="datePublished" class="page-time">
+  2017-11-30
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/laravel/">laravel</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/php/">php</a></li></ul>
 
             
         </h5>
@@ -185,20 +188,20 @@ ga('send', 'pageview');
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#错误提示："><span class="post-toc-number">1.</span> <span class="post-toc-text">错误提示：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运行环境："><span class="post-toc-number">2.</span> <span class="post-toc-text">运行环境：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原因："><span class="post-toc-number">3.</span> <span class="post-toc-text">原因：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决方法："><span class="post-toc-number">4.</span> <span class="post-toc-text">解决方法：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-基础方法"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1.基础方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-更优方法"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2.更优方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-最好办法"><span class="post-toc-number">5.</span> <span class="post-toc-text">3.最好办法</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#错误提示："><span class="post-toc-number">1.</span> <span class="post-toc-text">错误提示：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#起因："><span class="post-toc-number">2.</span> <span class="post-toc-text">起因：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决方法："><span class="post-toc-number">3.</span> <span class="post-toc-text">解决方法：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下载jpeg8d源码"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">下载jpeg8d源码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解压并编译源码"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">解压并编译源码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#复制文件"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">复制文件</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
-<article id="post-laravel-migration-1071-error"
+<article id="post-dyld-not-loaded-libjpeg-8-dylib"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">laravel建数据库表时出现1071错误</h1>
+        <h1 class="post-card-title">找不到libjpeg.8.dylib解决方法</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-04-06 15:44:28" datetime="2017-04-06T07:44:28.000Z"  itemprop="datePublished">2017-04-06</time>
+            <time class="post-time" title="2017-11-30 01:48:34" datetime="2017-11-29T17:48:34.000Z"  itemprop="datePublished">2017-11-30</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/laravel/">laravel</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../categories/php/">php</a></li></ul>
 
 
 
@@ -210,18 +213,13 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="错误提示："><a href="#错误提示：" class="headerlink" title="错误提示："></a>错误提示：</h3><p>php artisan migrate创建表时提示如下错误</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[Illuminate\Database\QueryException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter tabl e users add unique users_email_unique(email))</div><div class="line"></div><div class="line">[PDOException] SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes</div></pre></td></tr></table></figure>
-<h3 id="运行环境："><a href="#运行环境：" class="headerlink" title="运行环境："></a>运行环境：</h3><p>Laravel = 5.4</p>
-<p>PHP = 7.0</p>
-<p>MariaDB = 10. 1.21</p>
-<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>Laravel 使用 utf8mb4 作为默认编码，原有是想数据库支持emoji表情，但是默认编码是4个字节，数据库支持最大767个bytes，所以最大长度767/4=191，string类型字段默认长度255超过了191。</p>
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><h4 id="1-基础方法"><a href="#1-基础方法" class="headerlink" title="1.基础方法"></a>1.基础方法</h4><p>修改/app/Providers/AppServiceProvider.php</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">use Illuminate\Support\Facades\Schema; //Import Schema</div><div class="line"></div><div class="line">function boot()</div><div class="line">&#123;</div><div class="line">    Schema::defaultStringLength(191); //Solved by increasing StringLength</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>修改了默认长度。</p>
-<h4 id="2-更优方法"><a href="#2-更优方法" class="headerlink" title="2.更优方法"></a>2.更优方法</h4><p>了解并修改数据库的innodb_large_prefix选项。</p>
-<h3 id="3-最好办法"><a href="#3-最好办法" class="headerlink" title="3.最好办法"></a>3.最好办法</h3><p>Mysql升级到5.7.7以及更新版本。</p>
-<p>MariaDB升级到10.2.2以及更新版本。</p>
+            <h3 id="错误提示："><a href="#错误提示：" class="headerlink" title="错误提示："></a>错误提示：</h3><p>运行php指令及其有依赖的指令，例如composer出现错误提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dyld: Library not loaded: /usr/local/opt/jpeg/lib/libjpeg.8.dylib</div><div class="line">  Referenced from: /usr/local/bin/php</div><div class="line">  Reason: image not found</div><div class="line">Abort trap: 6</div></pre></td></tr></table></figure>
+<h3 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h3><p>反正肯定文件不存在是找不到<br>我是通过brew升级了下jped 8d-&gt;9d<br>然后brew cleanup 把老的清理掉了，于是8d的文件都找不到</p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><h4 id="下载jpeg8d源码"><a href="#下载jpeg8d源码" class="headerlink" title="下载jpeg8d源码"></a>下载jpeg8d源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget -c http://www.ijg.org/files/jpegsrc.v8d.tar.gz</div></pre></td></tr></table></figure>
+<h4 id="解压并编译源码"><a href="#解压并编译源码" class="headerlink" title="解压并编译源码"></a>解压并编译源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tar xzf jpegsrc.v8d.tar.gz</div><div class="line">cd jpeg-8d</div><div class="line">./configure</div><div class="line">make</div></pre></td></tr></table></figure>
+<h4 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp ./.libs/libjpeg.8.dylib /usr/local/opt/jpeg/lib</div></pre></td></tr></table></figure>
+<p>问题解决，哦耶</p>
 
         </div>
 
@@ -229,12 +227,12 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-11-29T18:00:37.770Z" itemprop="dateUpdated">2017-11-30 02:00:37</time>
+    最后更新时间：<time datetime="2017-11-29T17:59:56.916Z" itemprop="dateUpdated">2017-11-30 01:59:56</time>
 </span><br>
 
 
         
-        欢迎转发并带上链接：<a href="" target="_blank" rel="external">http://blog.netbiu.com/20170406/laravel-migration-1071-error/</a>
+        欢迎转发并带上链接：<a href="" target="_blank" rel="external">http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/</a>
         
     </div>
     <footer>
@@ -254,7 +252,7 @@ ga('send', 'pageview');
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/database/">database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/laravel/">laravel</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/jpeg/">jpeg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/php/">php</a></li></ul>
 
 
             
@@ -264,7 +262,7 @@ ga('send', 'pageview');
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.netbiu.com/20170406/laravel-migration-1071-error/&title=《laravel建数据库表时出现1071错误》 — Lucas 博客&pic=http://blog.netbiu.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/&title=《找不到libjpeg.8.dylib解决方法》 — Lucas 博客&pic=http://blog.netbiu.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -274,22 +272,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.netbiu.com/20170406/laravel-migration-1071-error/&title=《laravel建数据库表时出现1071错误》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/&title=《找不到libjpeg.8.dylib解决方法》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.netbiu.com/20170406/laravel-migration-1071-error/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《laravel建数据库表时出现1071错误》 — Lucas 博客&url=http://blog.netbiu.com/20170406/laravel-migration-1071-error/&via=http://blog.netbiu.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《找不到libjpeg.8.dylib解决方法》 — Lucas 博客&url=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/&via=http://blog.netbiu.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.netbiu.com/20170406/laravel-migration-1071-error/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -309,21 +307,14 @@ ga('send', 'pageview');
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="../../20171130/xdebug-impact-on-composer/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">composer运行时提示xdebug问题</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="../../20170203/Data-Loss-at-GitLab/" id="post-next" class="post-nav-link">
+      <a href="../xdebug-impact-on-composer/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">GitLab误删库引发的小思考</h4>
+        <h4 class="title">composer运行时提示xdebug问题</h4>
       </a>
     </div>
   
@@ -426,7 +417,7 @@ ga('send', 'pageview');
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.netbiu.com/20170406/laravel-migration-1071-error/&title=《laravel建数据库表时出现1071错误》 — Lucas 博客&pic=http://blog.netbiu.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/&title=《找不到libjpeg.8.dylib解决方法》 — Lucas 博客&pic=http://blog.netbiu.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -436,22 +427,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.netbiu.com/20170406/laravel-migration-1071-error/&title=《laravel建数据库表时出现1071错误》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/&title=《找不到libjpeg.8.dylib解决方法》 — Lucas 博客&source=博客,日记,代码备份,心情,吐槽" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.netbiu.com/20170406/laravel-migration-1071-error/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《laravel建数据库表时出现1071错误》 — Lucas 博客&url=http://blog.netbiu.com/20170406/laravel-migration-1071-error/&via=http://blog.netbiu.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《找不到libjpeg.8.dylib解决方法》 — Lucas 博客&url=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/&via=http://blog.netbiu.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.netbiu.com/20170406/laravel-migration-1071-error/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -462,7 +453,7 @@ ga('send', 'pageview');
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aS47jMAwFwNz/0p5tA4PIj6IcwFJ51UjHlioBGH70+cTX9eX6+9/x+8dP/v+uzxMXBgbGaxnX8Bov0N/i+ENJ9oaBgXEOI9nE+K7xc5IwmoTyr69jYGBgxIxkE511MTAwMDqPywvdPDRjYGBgVIvYvNNVLUF/WotjYGC8kJF33X//9yPzDQwMjFcxruL1m6eVn4OBgbE1Iw9wa4eacyXuzbABAwPjYEZSmubbffDDwsDAOIbRGRIsbvRXx6gYGBgHMFa15pPQXF2rkBpiYGBsx5hLxZIDYdUBQzXpXJBRYmBgvIqRJGd5ipa3/pN7o2IYAwNja0YeQFsLBLy5kefNYAADA2Mjxlyy2AHPBdxCMoqBgbEpIwlzeRuuOtrMD20UvgcMDIyNGJ20r1/6JoDCYQsMDIztGHOJ4NwwYBxqOwMJDAyMvRmdvnq1TJ0bcCZ3YWBgnMO4abUvGk+2gmmwQwwMjF0Zc/25anN/7WGLKCnEwMDYjpEPBuZSvXy0kIf7r003DAyMTRl5uMyLz7nxwILTbRgYGFszksX6TbFH7sLAwNiUcRWvPLxWx5bVwrWQ22JgYLycMRfsqsG30DKLRwutOS0GBsYLGZ0gm48WOsfIooCLgYFxAGNuSNnZ3FyqFw0GMDAwMBqjgk5IvVkXAwMDYyr45q8kZfDNkAADA+MAxtyG8iMXa4eaGBgYpzGqpeNv3ln9GcDAwNiU8Q9lXuTz+4V9AQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrklEQVR42u3aQW4jMQwEwPz/09nrAoHtblJyHKDmFEycjEqHEd3k11d8ff93tXd+/vb5/eef/Lpx4eHh4S2Wnizi0cMePX7/V8lm/VwhHh4e3m1evqzkAEi2Lz88kqc8vI+Hh4f3Aby2dp2V4EkhjoeHh/dXeLMSfJMe/Nq5h4eHh/eU1xa+bXm9jzmuZy14eHh4MS9/WX/Oz1f6e3h4eHjrrnoSqubxwSzUWK0WDw8P7wJv88i8hM1ji+cRw3Br8PDw8I7yboxJnRqx2mwNHh4e3nt4s/bS7LU+a6clBXedoODh4eEd5W3aYLNS+HADDA8PD+/Deuvty3q2uLYEP9bfw8PDwzvUasofOSvQN9v6or+Hh4eHd4HXlsj5q7wtyo8NJeDh4eFd4OXF9CYOyO/ncfDhGAIPDw+v5OVFcx7OHtjXUez74vTDw8PDW/Pa4rVtU+XRRv7Sr4eu8PDw8K7xWsyMtI93E16dRuPh4eGNePtv8e3QwL5Yf4HEw8PDu8BLFjd7NW9aaJt2V4TEw8PDW/PaBlXe+N+PWyVDV8PTDw8PD2/Ea0vkdkSgPULa4YMXW4aHh4d3gXe2wz6LEvax75sGCPDw8PAejA4kwwF5ydu22drteLFOPDw8vAu8fRTbNszyeCI/Kl4U5Xh4eHjXeG3AuhnMWjX+27EGPDw8vLfw2pi1HSzYh8XFTAQeHh7eZV6ObF/Qs7ZWe+Hh4eHd5n2XVx4xJJ/f/FV0PODh4eFd4LUv3HZQIA8v2m09e5zg4eHhtbxT/zofxpoV6ElI8fAbAx4eHt4FXtsYy4elLp5XeSSBh4eH96u82XLbaCOPKl6sBw8PD+8DeLPG/6nh12hEFQ8PD+8tvHZx++HUYrphdOTg4eHh3eO1X+/bJlYb5h4YBcDDw8O7xfsHObfFOtEVkwcAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
