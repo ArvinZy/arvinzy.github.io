@@ -2,44 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.netbiu.com/20171231/git-with-webhook-deploy/</loc>
+    
+    <lastmod>2017-12-31T08:28:09.570Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.netbiu.com/20171130/github-custom-domain-cannt-change-by-hexo-deploy/</loc>
     
-    <lastmod>2017-11-29T18:56:45.882Z</lastmod>
+    <lastmod>2017-11-29T18:56:45.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.netbiu.com/20171130/xdebug-impact-on-composer/</loc>
     
-    <lastmod>2017-11-29T18:01:04.654Z</lastmod>
+    <lastmod>2017-11-29T18:01:04.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.netbiu.com/20170406/laravel-migration-1071-error/</loc>
     
-    <lastmod>2017-11-29T18:00:37.770Z</lastmod>
+    <lastmod>2017-11-29T18:00:37.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.netbiu.com/20171130/dyld-not-loaded-libjpeg-8-dylib/</loc>
     
-    <lastmod>2017-11-29T17:59:56.916Z</lastmod>
+    <lastmod>2017-11-29T17:59:56.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.netbiu.com/categories/index.html</loc>
     
-    <lastmod>2017-11-29T16:18:40.946Z</lastmod>
+    <lastmod>2017-11-29T16:18:40.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.netbiu.com/tags/index.html</loc>
     
-    <lastmod>2017-11-29T16:18:17.867Z</lastmod>
+    <lastmod>2017-11-29T16:18:17.000Z</lastmod>
     
   </url>
   
